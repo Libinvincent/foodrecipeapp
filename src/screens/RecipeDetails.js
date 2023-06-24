@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, StatusBar, ScrollView, Image } from 'react-native'
+import { View, Text, StyleSheet, StatusBar, ScrollView, Image,ActivityIndicator } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Colors, Fonts, Images } from '../constants'
 import { Separator } from '../components'

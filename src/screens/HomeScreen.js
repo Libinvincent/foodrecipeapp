@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet,StatusBar,ScrollView, FlatList } from 'react-native'
+import { View, Text,StyleSheet,StatusBar,ScrollView, FlatList ,ActivityIndicator} from 'react-native'
 import React, { useState ,useEffect} from 'react'
 import  Ionicons  from 'react-native-vector-icons/Ionicons'
 import  MaterialIcons  from 'react-native-vector-icons/MaterialIcons'
@@ -13,11 +13,13 @@ export default function HomeScreen({navigation}) {
 
 const [item,setitem]=useState()
 const[serch,setsearch]=useState('')
+const [isApploding,setisApploding]=useState(false)
 
 useEffect(()=> {
    foodDataFeching().then(res =>{
     
      setitem(res?.meals)
+     setisApploding(true)
    })
      },[])
 
@@ -75,12 +77,12 @@ useEffect(()=> {
             <Text style={Styles.listHeaderTitel}>Top rated</Text>
             <Text style={Styles.listHeaderSubtitel}>see all</Text>
           </View>
-          
+          {!isApploding ? <ActivityIndicator size="large" color={Colors.DEFAULT_YELLOW} /> :
           <FlatList data={item} renderItem={(item)=><RecipeSubCard {...item}
           navigate={(idMeal)=>navigation.navigate("RecipeScreen",{idMeal})}/>}
-          
+            
 
-          ListHeaderComponent={()=><Separator width={20}/>}/>
+          ListHeaderComponent={()=><Separator width={20}/>} numColumns={2}/>}
         </View>
       </ScrollView>
 
