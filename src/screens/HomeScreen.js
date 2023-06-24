@@ -69,7 +69,7 @@ useEffect(()=> {
         
       </View>
       {/* main content view */}
-      <ScrollView style={Styles.listContainer} decelerationRate={.2}>
+      <ScrollView style={Styles.listContainer} decelerationRate={.8}>
         <View style={Styles.horizontalListContainer}>
           <View style={Styles.horizontalListHeader}>
             <Text style={Styles.listHeaderTitel}>Top rated</Text>
