@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, StatusBar, ScrollView, Image } from 'react-native'
+import { View, Text, StyleSheet, StatusBar, ScrollView, Image, Button } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Colors, Fonts, Images } from '../constants'
 import { Separator } from '../components'
@@ -12,7 +12,9 @@ export default function ParticularRecipeDeteals({data}) {
     
   return (
     <View>
+        
        <Image source={Images.PASTHA} style={Styles.backgroundImage} resizeMode='center' />
+       
 
 <ScrollView>
     <Separator height={Display.SetHeight(32)} />
@@ -33,6 +35,7 @@ export default function ParticularRecipeDeteals({data}) {
              <View style={Styles.rowAndCenter}>
                 <Image recipeImageIcoin/>
                 <Text style={Styles.recipeDetealsText}>libin vincent</Text>
+               
              </View> 
 
              

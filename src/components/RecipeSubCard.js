@@ -8,17 +8,16 @@ import { Display } from '../utils'
 export default function RecipeSubCard({ item,navigate }) {
     // console.log(item)
     return (
-        <TouchableOpacity style={Styles.container} activeOpacity={.8}
-         onPress={()=>navigate(item.idMeal)}>
+        <TouchableOpacity style={Styles.container} activeOpacity={.8} onPress={()=>navigate(item.idMeal)}>
             <View>
-
+            
                 <Image source={{ uri: item.strMealThumb }} style={Styles.posterImage} resizeMode='cover' />
                 <Text style={Styles.textTitle}>{item.strMeal}</Text>
                 <Text style={Styles.tagText}>{item.strCategory}</Text>
                 <View style={Styles.footerContainer}>
-                    <View>
-                        <FontAwesome name='star' size={14} color={Colors.DEFAULT_YELLOW} />
-                        <Text style={Styles.ratingText}>130</Text>
+                    <View style={{flexDirection:'row',marginVertical:5}}>
+                        <FontAwesome name='star' size={15} color={Colors.DEFAULT_YELLOW} />
+                        <Text style={Styles.tagText}>130</Text>
 
                     </View>
 
@@ -29,9 +28,9 @@ export default function RecipeSubCard({ item,navigate }) {
                     <View style={Styles.rowIcon}>
                     <Ionicons name='bookmark-outline' size={24} color={Colors.DEFAULT_YELLOW}/>
                     </View>
-                </View>
+        
 
-
+</View>
         </TouchableOpacity>
     )
 }
@@ -53,15 +52,17 @@ const Styles = StyleSheet.create({
         height: Display.SetHeight(20),
         borderRadius: 10,
         margin: 5,
+    
 
 
     },
     textTitle: {
         marginLeft: 10,
-        fontSize: 15,
+        fontSize: 12,
         fontFamily: Fonts.Poppins_SemiBold,
-        lineHeight: 15 * 1.4,
+        lineHeight: 12 * 1.4,
         color: Colors.DEFAULT_BLACK,
+        width:120
 
     },
     tagText: {
@@ -85,7 +86,7 @@ const Styles = StyleSheet.create({
     rowIcon: {
        alignItems:'flex-end',
        position:'absolute',
-       left:180,
+       left:-3,
        top:10
 
     },

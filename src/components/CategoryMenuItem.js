@@ -2,11 +2,18 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { Colors, Fonts, Images } from '../constants'
 
-export default function CategoryMenuItem({ name, logo}) {
 
-  // console.log(Images[logo])
+
+
+
+export default function CategoryMenuItem({ name, logo,Categoryname,navigation}) {
+  
+
+  // Allitem is a filter cheyyan ulla data aanu home page il aanu athu use cheythathu
+
+    // console.log("my all item is ther",Categoryname)
   return (
-    <TouchableOpacity key={name} 
+    <TouchableOpacity key={name} onPress={()=>navigation.navigate("FilterRecipe",Categoryname)}
       style={Styles.category}>
       <View key={name} style={Styles.icoinContainer}>
         <Image source={Images[logo]} style={Styles.categoryIcon} />
@@ -19,7 +26,7 @@ export default function CategoryMenuItem({ name, logo}) {
   )
 }
 
-const Styles = StyleSheet.create({
+const Styles = StyleSheet.create({  
   icoinContainer: {
     borderRadius: 25,
     width: 50,

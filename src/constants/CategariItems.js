@@ -1,9 +1,9 @@
 const CATEGORIES=[
-    { name:"non-veg", logo:"NON_VEG"},
-    { name:"veg", logo:"VEG"},
-    { name:"Desert", logo:"DESSERT"},
-    { name:"Ice-creems", logo:"ICE_CREEM"},
-    { name:"Pastha", logo:"PASTHA"},
+    { name:"non-veg", logo:"NON_VEG",CATEGORIE:"Beef"},
+    { name:"veg", logo:"VEG",CATEGORIE:"Vegetarian"},
+    { name:"Desert", logo:"DESSERT",CATEGORIE:"Dessert"},
+    { name:"Seafood", logo:"ICE_CREEM",CATEGORIE:"Seafood"},
+    { name:"Pastha", logo:"PASTHA",CATEGORIE:"Pasta"},
 
 ]
 export default CATEGORIES

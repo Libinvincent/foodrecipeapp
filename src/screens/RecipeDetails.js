@@ -8,13 +8,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { foodDataDetealdView } from '../service'
 
 export default function RecipeDetails({ route: { params: idMeal } }) {
-    const [item, setitem] = useState([])
-
-
     
-
-
-
 
     return (
 

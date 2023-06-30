@@ -7,9 +7,9 @@ import { Display } from '../utils'
 export default function SplashScreen({navigation}) {
 
   useEffect(()=>{
-    setInterval(()=>{
-      navigation.navigate("home")
-    },2000)
+    setTimeout(()=>{
+      navigation.navigate("Drawer")
+    },1000)
   },[])
 
  
