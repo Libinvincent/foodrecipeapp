@@ -6,7 +6,7 @@ import Feather from 'react-native-vector-icons/Feather'
 // import {Colors,Fonts,CATEGORIES} from "../constants/index"
 import { Colors, Fonts, CATEGORIES } from '../constants'
 import { Separator, CategoryMenuItem, RecipeSubCard } from "../components/index"
-import { foodDataFeching, foodDataFilter, foodDataSerch,AllFooditems } from '../service'
+import { foodDataFeching, foodDataFilter, foodDataSerch} from '../service'
 import { TextInput } from 'react-native-gesture-handler'
 import { Display } from '../utils'
 
@@ -23,9 +23,7 @@ export default function HomeScreen({ navigation }) {
       setitem(res?.meals)
       setisApploding(true)
     })
-    AllFooditems().then(response=>{
-      setAllitem(response.categories)
-    })
+   
     
   }, [])
   

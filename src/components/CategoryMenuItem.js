@@ -4,8 +4,6 @@ import { Colors, Fonts, Images } from '../constants'
 
 
 
-
-
 export default function CategoryMenuItem({ name, logo,Categoryname,navigation}) {
   
 

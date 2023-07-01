@@ -4,10 +4,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { FilterRecipe } from "../components";
 
 
-import {HomeScreen,RecipeDetails, SplashScreen} from "../screens"
+import {HomeScreen,RecipeDetails, SplashScreen,DrawerScreen} from "../screens"
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import DrawerScreen from "../screens/DrawerScreen";
+
 
 
 
@@ -18,7 +18,7 @@ const Drawer=createDrawerNavigator()
 
 export function Drawerstack(){
     return(
-        <Drawer.Navigator screenOptions={{
+        <Drawer.Navigator drawerContent={()=><DrawerScreen/>}  screenOptions={{
             headerShown:false,
             drawerPosition:"right",
             

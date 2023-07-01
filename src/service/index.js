@@ -1,4 +1,4 @@
-import { foodDataSerch,foodDataFeching,foodDataFilter,foodDataDetealdView,AllFooditems } from "./ApiServices";
+import { foodDataSerch,foodDataFeching,foodDataFilter,foodDataDetealdView,AllCatagorylist } from "./ApiServices";
 
 
-export {foodDataFeching,foodDataFilter,foodDataSerch,foodDataDetealdView,AllFooditems}
+export {foodDataFeching,foodDataFilter,foodDataSerch,foodDataDetealdView,AllCatagorylist}

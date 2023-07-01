@@ -24,10 +24,10 @@ const foodDataFilter = async (name) => {
 };
 
 
-const AllFooditems=async()=>{
+const AllCatagorylist=async()=>{
     try{
         let respons=await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php')
-        return respons.data
+        return respons.data.categories
     }catch(error){
         console(error)
     }
@@ -47,7 +47,7 @@ const foodDataSerch = async ({search}) => {
 const foodDataDetealdView = async ({idMeal}) => {
     try {
         let respons = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`)
-        return respons 
+        return respons.data
         
     } catch (error) {
         console.log(error)
@@ -55,4 +55,4 @@ const foodDataDetealdView = async ({idMeal}) => {
 }
 
 
-export   { foodDataFeching,foodDataFilter,foodDataSerch ,foodDataDetealdView,AllFooditems} 
+export   { foodDataFeching,foodDataFilter,foodDataSerch ,foodDataDetealdView,AllCatagorylist} 
