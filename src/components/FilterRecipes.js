@@ -35,7 +35,7 @@ useEffect(()=>{
         <Text style={Styles.maintext}>{Categoryname}</Text>
         </View>
         {
-          !isApploding ?
+          !isApploding ? 
         
       
       <FlatList data={CatagoryItem} renderItem={(CatagoryItem)=><RecipeSubCard {...CatagoryItem}/>}

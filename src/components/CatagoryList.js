@@ -8,26 +8,29 @@ import RecipeSubCard from './RecipeSubCard'
 export default function CatagoryList({item}) {
     
     const [catagoryItem,setCatagoryItem]=useState([])
+    const [cat,setcat]=useState({item})
+    
+    
  
    
 
     function CatagorylistView(catagoryname){
+        console.log(catagoryname)
         
   foodDataFilter(catagoryname).then(res=>{
     console.log(res)
     setCatagoryItem(res.meals)
     
     
+    
   })
-  return(
-    <RecipeSubCard {...catagoryItem}/>
-  )
+  
 
     }
 
 
     return (
-        <TouchableOpacity style={Styles.container} activeOpacity={.8}  >
+        <TouchableOpacity style={Styles.container} activeOpacity={.8} onPress={()=>CatagorylistView(item.strCategory)} >
             <View style={Styles.catagoryView}>
                 <Text style={Styles.catagoryText} >{item.strCategory}</Text>
             </View>

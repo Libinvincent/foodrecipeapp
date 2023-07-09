@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { FilterRecipe } from "../components";
+import { FilterRecipe, RecipeSubCard } from "../components";
 
 
 import {HomeScreen,RecipeDetails, SplashScreen,DrawerScreen} from "../screens"
@@ -42,7 +42,8 @@ export default function MyStack() {
                 <Stack.Screen name="RecipeScreen" component={RecipeDetails}/>
                 <Stack.Screen name="FilterRecipe" component={FilterRecipe}/>
                 <Stack.Screen name="Drawer" component={Drawerstack}/>
-               
+                <Stack.Screen name="RecipeSubCard" component={RecipeSubCard}/>
+                
             </Stack.Navigator>
         </NavigationContainer>
     )
